@@ -8,24 +8,24 @@
                <i class="iconfont" :class="tab.icon"></i>
                <span>{{tab.name}}</span>
             </router-link>
-           </li> 
-              
-  
-       </ul>   
-    </div> 
+           </li>
+
+
+       </ul>
+    </div>
 </template>
 
 <script>
 export default {
-    name:"Tabbar",
-    props: {
-       tabs:{
-          type:Array,
-          default() {
-             return [];
-          }
-       }
-    }
+  name: 'Tabbar',
+  props: {
+    tabs: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
 };
 </script>
 <style lang="scss">
@@ -36,7 +36,6 @@ export default {
    @include border-bottom;
     height:px2rem(50);
     background:#fff;
-  
 
 
    .mz-tabber__ul {
@@ -66,4 +65,3 @@ export default {
 
 }
 </style>
-
