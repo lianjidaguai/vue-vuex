@@ -29,7 +29,7 @@
               <span class="label">{{ item.nation }} | {{ item.runtime }}分钟</span>
             </div>
             <div v-show="filmType==='comingSoon'" class="film-actors info-col">
-              <span class="label">上映日期：{{ item.premiereAt | dataFormat('') }}</span>
+              <span class="label">上映日期：{{ item.premiereAt}}</span>
             </div>
           </div>
           <div class="buy" v-show="filmType==='nowPlaying'">购票</div>

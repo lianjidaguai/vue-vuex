@@ -74,7 +74,7 @@ const actions = {
   getFilmList({ commit, state },isChageFilmType) {
     // 请求之前， loading
     if(isChageFilmType) {
-      commit({type:"setFilmList",list:[],total:1});
+      //commit({type:"setFilmList",list:[],total:1});
       commit({type:"setPageNum",num:1})
     }
     Toast.loading({ duration: 0, mask: true, message: "加载中..." });
@@ -105,7 +105,9 @@ const actions = {
             // list: state.filmList.concat(res.data.films), ✅
             // list: state.filmList.push(res.data.films),   ❎
             // list: state.filmList.push(...res.data.films), ✅
-            list: [...state.filmList, ...res.data.films],
+            list: isChageFilmType
+            ? res.data.films
+            : [...state.filmList, ...res.data.films],
             total: res.data.total
           });
         } else {
